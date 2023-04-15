@@ -3,7 +3,6 @@ body{
 }
 
 main{
-    display:;
     justify-content: space-between;
 }
 
@@ -16,6 +15,7 @@ section{
     display: flex;
     flex-direction: column;
     padding:20px;
+    margin:5px;
     background-color: rgb(223, 223, 223);
     border: rgb(32, 1, 31) 1px solid;
     justify-content: space-between;
@@ -44,15 +44,15 @@ div{
     flex: 0.5 0 0px;
 }
 
-/*
-@media screen and (min-resolution: 500px){
+
+@media all and (min-width: 850px){
     main{
         display: flex;
     }
 }
-/*
-@media screen and (max-resolution: 300dpi){
+
+@media all and (max-width: 850px){
     main{
-        display: flex;
+        display: block;
     }
 }
