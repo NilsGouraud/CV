@@ -7,9 +7,30 @@ main{
 }
 
 header{
-    color:white
+    color:white;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
 }
 
+.nom{
+    font-size: 25px;
+}
+.portrait{
+    border-radius: 50%;
+    height: 150px;
+    box-shadow:   0px 0px 100px rgb(94, 3, 89);
+    
+}
+
+.icone{
+    height:15px;
+    padding-top:5px;
+    filter:invert()
+}
+.sansListe{
+    list-style-type: none;
+}
 section{
     flex: 1 1 0px;
     display: flex;
@@ -19,6 +40,8 @@ section{
     background-color: rgb(223, 223, 223);
     border: rgb(32, 1, 31) 1px solid;
     justify-content: space-between;
+        box-shadow:   0px 0px 10px rgb(94, 3, 89);
+
 }
 
 article{
@@ -48,6 +71,9 @@ div{
 @media all and (min-width: 850px){
     main{
         display: flex;
+    }
+    header{
+        margin-bottom:50px;
     }
 }
 
