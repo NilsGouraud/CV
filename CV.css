@@ -11,8 +11,8 @@ header{
     justify-content: space-evenly;
     display: flex;
     align-items: center;
-
 }
+
 
 .nom{
     font-size: 25px;
@@ -21,7 +21,7 @@ header{
     border-radius: 50%;
     height: 150px;
     box-shadow:   0px 0px 75px rgb(94, 3, 89);
-    
+    animation: fadeIn 2s;    
 }
 
 .icone{
@@ -74,6 +74,11 @@ div{
     font-weight: 550;
 }
 
+@keyframes fadeIn{
+    from{opacity:0} to{opacity: 1};
+}
+
+
 
 @media all and (min-width: 850px){
     main{
@@ -94,3 +99,5 @@ div{
         flex-direction: column;
     }
 }
+
+
