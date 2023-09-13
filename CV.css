@@ -21,7 +21,9 @@ header{
     border-radius: 50%;
     height: 150px;
     box-shadow:   0px 0px 75px rgb(94, 3, 89);
-    animation: fadeIn 2s;    
+    
+    animation: 
+    fadeIn 2s;
 }
 
 .icone{
@@ -33,6 +35,9 @@ header{
 .sansPuce{
     list-style-type: none;
 }
+
+
+
 section{
     flex: 1 1 0px;
     display: flex;
@@ -42,9 +47,17 @@ section{
     background-color: rgb(223, 223, 223);
     border: rgb(32, 1, 31) 1px solid;
     justify-content: space-between;
-        box-shadow:   0px 0px 10px rgb(94, 3, 89);
-
+    box-shadow:   0px 0px 10px rgb(94, 3, 89);
+    
 }
+
+
+
+section div,section article,article li, section li{
+    opacity: 0;
+    animation: fadeIn 1s 1s forwards ;
+}
+
 
 article{
     display:list-item;
@@ -77,16 +90,74 @@ div{
 @keyframes fadeIn{
     from{opacity:0} to{opacity: 1};
 }
+@keyframes PortraitSlideLeft{
+    from{margin-right:+250px} to{};
+}
+@keyframes PortraitSlideRight{
+    from{margin-left:+250px} to{};
+}
+
+@keyframes LandscapeSlideLeft{
+    from{margin-right:+250px} to{};
+}
+@keyframes LandscapeSlideRight{
+    from{margin-left:+250px} to{};
+}
+
+@keyframes LandscapeSlideBottom{
+    from{
+        margin-top:-200px;
+        margin-bottom:+200px;
+    } 
+    to{};
+}
 
 
 
 @media all and (min-width: 850px){
+    .nom{
+        animation:
+        LanscapeSlideBottom 2s,
+        fadeIn 2s;
+    }
     main{
         display: flex;
     }
     header{
         margin-bottom:50px;
     }
+    .portrait{
+        animation:
+        LandscapeSlideBottom 0.8s,
+        fadeIn 2s;
+    }
+    .sansPuce{
+        animation:
+        LandscapeSlideRight 1s,
+        fadeIn 2s;
+    }
+    .nom{
+        animation:
+        LandscapeSlideLeft 1s,
+        fadeIn 2s;
+    }
+    section:nth-child(1){
+        animation: 
+        LandscapeSlideLeft 0.8s,
+        fadeIn 0.8s ease-in forwards;
+    }
+
+/*        fadeIn 0.8s ease-in forwards;
+*/
+    
+
+    section:nth-child(3){
+        animation: 
+        LandscapeSlideRight 0.8s,
+        fadeIn 0.8s ease-in;
+
+    }
+    
 }
 
 @media all and (max-width: 850px){
@@ -98,6 +169,30 @@ div{
         display: flex;
         flex-direction: column;
     }
+    
+    .sansPuce:nth-child(1){
+        animation : 
+        PortraitSlideRight 1.5s forwards,
+        fadeIn 1.5s forwards;
+    }
+    .sansPuce:nth-child(2){
+        
+        animation :
+        PortraitSlideLeft 1.5s,
+        fadeIn 1.5s;
+    }
+    .sansPuce:nth-child(3){
+        animation : 
+        PortraitSlideRight 1.5s forwards,
+        fadeIn 1.5s forwards;
+    }
+    .nom{
+        animation:fadeIn 2s;
+    }
+    
+    
+    
+    
 }
 
 
