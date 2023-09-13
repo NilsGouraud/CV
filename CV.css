@@ -55,7 +55,7 @@ section{
 
 section div,section article,article li, section li{
     opacity: 0;
-    animation: fadeIn 1s 1s forwards ;
+    animation: fadeIn 0.5s 1.2s forwards ;
 }
 
 
@@ -111,6 +111,12 @@ div{
     } 
     to{};
 }
+@keyframes BlackAndWhite{
+    from{}
+    to{
+        background-position:right;
+    }
+}
 
 
 
@@ -141,21 +147,30 @@ div{
         LandscapeSlideLeft 1s,
         fadeIn 2s;
     }
+    section{
+        background: linear-gradient( 30deg,white , white, rgb(42, 0, 40) , white,white) left;
+        background-size: 600%;
+    }
     section:nth-child(1){
         animation: 
         LandscapeSlideLeft 0.8s,
+        BlackAndWhite 0.8s  1s forwards,
         fadeIn 0.8s ease-in forwards;
     }
-
-/*        fadeIn 0.8s ease-in forwards;
-*/
     
-
+    
+    section:nth-child(2){
+        animation: 
+        BlackAndWhite 0.8s  1s forwards,
+        fadeIn 0.8s ease-in;
+    }
+    
     section:nth-child(3){
         animation: 
+        BlackAndWhite 0.8s  1s forwards,
         LandscapeSlideRight 0.8s,
         fadeIn 0.8s ease-in;
-
+        
     }
     
 }
@@ -188,6 +203,17 @@ div{
     }
     .nom{
         animation:fadeIn 2s;
+    }
+
+    section{
+        background: linear-gradient( 30deg,white , white, rgb(42, 0, 40) , white,white) left;
+        background-size: 600%;
+    }
+    section:nth-child(1){
+        animation: 
+        LandscapeSlideLeft 0.8s,
+        BlackAndWhite 0.8s  1s forwards,
+        fadeIn 0.8s ease-in forwards;
     }
     
     
