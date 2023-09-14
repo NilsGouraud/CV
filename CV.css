@@ -149,7 +149,7 @@ div{
     }
     section{
         background: linear-gradient( 30deg,white , white, rgb(42, 0, 40) , white,white) left;
-        background-size: 600%;
+        background-size: 900%;
     }
     section:nth-child(1){
         animation: 
@@ -207,7 +207,7 @@ div{
 
     section{
         background: linear-gradient( 30deg,white , white, rgb(42, 0, 40) , white,white) left;
-        background-size: 600%;
+        background-size: 900%;
     }
     section:nth-child(1){
         animation: 
