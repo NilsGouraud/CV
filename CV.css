@@ -18,6 +18,71 @@ aside{
     justify-content: center;
     gap: 50px;
 }
+
+
+q{
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 2s 3s forwards;
+}
+
+span{
+    display: block;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    height: 0px;
+    width: 0px;
+    color: white;
+    border-radius: 10px 10px 0 10px;
+    opacity: 0;
+    box-shadow:  
+    inset 0px 0px 10px rgb(1, 0, 1),
+    0px 0px 200px rgb(32, 1, 31);
+
+    overflow: hidden;
+
+    animation:
+    unfold 0.5s 2.5s forwards,
+    fadeIn 2s 2.5s forwards;
+}
+
+
+@keyframes unfold{
+    from{
+        height: 0px;
+        width: 0px;
+    } to{
+        height: 60px;
+        width: 400px;
+    }
+}
+
+.dialogue{
+    height: 0;
+    width: 0;
+    border-color: white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top:  5px solid;
+    border-bottom: none;
+    
+    margin-left: auto;
+    margin-right: 10px;
+    animation: clignotement 0.8s 4s infinite;
+}
+
+@keyframes clignotement{
+    from{
+        margin-top: -5px;
+    }
+    to{
+        margin-top: 0;
+    }
+}
+
+
 .logo{
     height: 125px;
     width: 125px;
@@ -161,6 +226,7 @@ div{
         background-position:right;
     }
 }
+
 
 
 
