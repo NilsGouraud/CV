@@ -94,7 +94,7 @@ section{
 
 section div,section article,article li, section li{
     opacity: 0;
-    animation: fadeIn 0.5s 1.2s forwards ;
+    animation: fadeIn 0.5s 2.2s forwards ;
 }
 
 
@@ -142,10 +142,10 @@ div{
 }
 
 @keyframes LandscapeSlideLeft{
-    from{margin-right:+250px} to{};
+    from{margin-right:+250px} to{margin-right:0};
 }
 @keyframes LandscapeSlideRight{
-    from{margin-left:+250px} to{};
+    from{margin-left:+250px} to{margin-left:0};
 }
 
 @keyframes LandscapeSlideBottom{
@@ -196,26 +196,41 @@ div{
         background-size: 900%;
     }
     section:nth-child(1){
+        margin-right:+250px;
+        opacity: 0;
         animation: 
-        LandscapeSlideLeft 0.8s,
-        BlackAndWhite 0.8s  1s forwards,
-        fadeIn 0.8s ease-in forwards;
+        LandscapeSlideLeft 0.8s 1s forwards,
+        BlackAndWhite 0.8s  2s forwards,
+        fadeIn 0.8s 1s ease-in forwards;
     }
-    
-    
     section:nth-child(2){
+        opacity: 0;
         animation: 
-        BlackAndWhite 0.8s  1s forwards,
-        fadeIn 0.8s ease-in;
+        BlackAndWhite 0.8s  2s forwards,
+        fadeIn 0.8s 1s ease-in forwards;
     }
     
     section:nth-child(3){
+        margin-left:+250px;
+        opacity: 0;
         animation: 
-        BlackAndWhite 0.8s  1s forwards,
-        LandscapeSlideRight 0.8s,
-        fadeIn 0.8s ease-in;
+        LandscapeSlideRight 0.8s 1s forwards,
+        BlackAndWhite 0.8s  2s forwards,
+        fadeIn 0.8s 1s ease-in forwards;
         
     }
+
+
+
+    /*
+@keyframes LandscapeSlideLeft{
+    from{margin-right:+250px} to{};
+}
+@keyframes LandscapeSlideRight{
+    from{margin-left:+250px} to{};
+}
+    */
+
     
 }
 
