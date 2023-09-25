@@ -1,9 +1,20 @@
 :root{
+    /*
+    anciennes couleurs: 
     --couleurPrincipale: rgb(32, 1, 31);
     --couleurOmbres: rgb(94, 3, 89);
     --couleurContenant: rgb(48, 2, 47);
     --couleurEffet: rgb(42, 0, 40);
+    */
+
+    --couleurPrincipale: rgb(1, 48, 62);
+    --couleurOmbres: rgb(3, 73, 105);
+    --couleurContenant: rgb(2, 33, 48);
+    --couleurEffet: rgb(0, 28, 42);
 }
+
+
+
 
 body{
     background-color: var(--couleurPrincipale);
@@ -43,9 +54,10 @@ span{
     width: 0px;
     color: white;
     border-radius: 10px 10px 0 10px;
+    border: 3px;
     opacity: 0;
     box-shadow:  
-    inset 0px 0px 10px rgb(1, 0, 1),
+    inset 0px 0px 10px rgb(0, 81, 115),
     0px 0px 200px var(--couleurPrincipale);
 
     overflow: hidden;
@@ -152,7 +164,7 @@ span{
 .portrait{
     border-radius: 50%;
     height: 150px;
-    box-shadow:   0px 0px 75px (--couleurOmbres);
+    box-shadow:   0px 0px 75px var(--couleurOmbres);
     
     animation: 
     fadeIn 2s;
@@ -286,7 +298,7 @@ div{
         fadeIn 2s;
     }
     section{
-        background: linear-gradient( 30deg,white , white, rgb(42, 0, 40) , white,white) left;
+        background: linear-gradient( 30deg,white , white, var(--couleurEffet) , white,white) left;
         background-size: 900%;
     }
     section:nth-child(1){
@@ -359,7 +371,7 @@ div{
     }
     
     section{
-        background: linear-gradient( 30deg,white , white, rgb(42, 0, 40) , white,white) left;
+        background: linear-gradient( 30deg,white , white, var(--couleurEffet) , white,white) left;
         background-size: 900%;
     }
     section:nth-child(1){
@@ -373,4 +385,5 @@ div{
     
     
 }
+
 
