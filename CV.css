@@ -1,5 +1,12 @@
+:root{
+    --couleurPrincipale: rgb(32, 1, 31);
+    --couleurOmbres: rgb(94, 3, 89);
+    --couleurContenant: rgb(48, 2, 47);
+    --couleurEffet: rgb(42, 0, 40);
+}
+
 body{
-    background-color: rgb(32, 1, 31);
+    background-color: var(--couleurPrincipale);
 }
 
 main{
@@ -39,7 +46,7 @@ span{
     opacity: 0;
     box-shadow:  
     inset 0px 0px 10px rgb(1, 0, 1),
-    0px 0px 200px rgb(32, 1, 31);
+    0px 0px 200px var(--couleurPrincipale);
 
     overflow: hidden;
 
@@ -111,7 +118,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow:   0px 0px 25px rgb(94, 3, 89);
+    box-shadow:   0px 0px 25px var(--couleurOmbres);
     background-color: rgb(48, 2, 47);
 
     transition: 0.3s;
@@ -145,7 +152,7 @@ span{
 .portrait{
     border-radius: 50%;
     height: 150px;
-    box-shadow:   0px 0px 75px rgb(94, 3, 89);
+    box-shadow:   0px 0px 75px (--couleurOmbres);
     
     animation: 
     fadeIn 2s;
@@ -170,9 +177,9 @@ section{
     padding:20px;
     margin:5px;
     background-color: rgb(223, 223, 223);
-    border: rgb(32, 1, 31) 1px solid;
+    border: var(--couleurPrincipale) 1px solid;
     justify-content: space-between;
-    box-shadow:   0px 0px 10px rgb(94, 3, 89);
+    box-shadow:   0px 0px 10px var(--couleurOmbres);
     
 }
 
@@ -366,5 +373,4 @@ div{
     
     
 }
-
 
