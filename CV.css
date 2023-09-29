@@ -150,6 +150,14 @@ span{
     fadeIn 0s 0.91s forwards;
 }
 
+.filter{
+   filter: brightness(350%)  hue-rotate(130deg);
+   transition: 0.2s;
+}
+.filter:hover{
+    filter: none;
+    transition: 0.2s;
+}
 
 .logo:hover{
     background-color: white;
