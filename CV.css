@@ -202,10 +202,16 @@ section{
     border: var(--couleurPrincipale) 1px solid;
     justify-content: space-between;
     box-shadow:   0px 0px 10px var(--couleurOmbres);
+}
+.blank{
+    background: linear-gradient(var(--couleurPrincipale));
+    box-shadow: none;
+}
+.interet{
+    font-size: 0.8rem;
+    padding: 5px 5px 5px 15px;
     
 }
-
-
 
 section div,section article,article li, section li{
     opacity: 0;
@@ -232,9 +238,7 @@ div{
     font-family: system-ui;
 }
 
-.interet{
-    flex: 0.5 0 0px;
-}
+
 
 .licence{
     font-size: 17px;
@@ -383,6 +387,11 @@ div{
     section{
         background: linear-gradient( 30deg,white , white, var(--couleurEffet) , white,white) left;
         background-size: 900%;
+    }
+    .blank{
+        background: linear-gradient(var(--couleurPrincipale));
+        border-color: var(--couleurPrincipale);  
+        box-shadow: none;
     }
     section:nth-child(1){
         animation: 
