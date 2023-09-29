@@ -153,8 +153,9 @@ span{
 .filter{
    filter: brightness(350%)  hue-rotate(130deg);
    transition: 0.2s;
+   height: 100%;
 }
-.filter:hover{
+.logo:hover .filter{
     filter: none;
     transition: 0.2s;
 }
@@ -164,6 +165,7 @@ span{
     padding: -3px;
     transition: 0.3s;
 }
+
 
 
 .nom{
