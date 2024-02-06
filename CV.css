@@ -1,3 +1,53 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end of css*/
+
 :root{
     /*
     anciennes couleurs: 
@@ -6,7 +56,7 @@
     --couleurContenant: rgb(48, 2, 47);
     --couleurEffet: rgb(42, 0, 40);
     */
-
+    
     --couleurPrincipale: rgb(1, 48, 62);
     --couleurOmbres: rgb(3, 73, 105);
     --couleurContenant: rgb(2, 33, 48);
@@ -18,10 +68,16 @@
 
 body{
     background-color: var(--couleurPrincipale);
+    overflow: hidden;
+    border: none;
 }
 
 main{
+    position: absolute;
     justify-content: space-between;
+    z-index: 1;
+    perspective: 1000px;
+    border: none;
 }
 
 header{
@@ -35,6 +91,7 @@ aside{
     display: flex;
     justify-content: center;
     gap: 50px;
+    perspective: 1000px;
 }
 
 
@@ -54,14 +111,14 @@ span{
     width: 0px;
     color: white;
     border-radius: 10px 10px 0 10px;
-    border: 3px;
+    border: 0px;
     opacity: 0;
     box-shadow:  
     inset 0px 0px 10px rgb(0, 81, 115),
     0px 0px 200px var(--couleurPrincipale);
-
+    
     overflow: hidden;
-
+    
     animation:
     unfold 0.5s 2.5s forwards,
     fadeIn 2s 2.5s forwards;
@@ -97,26 +154,26 @@ span{
     0%{
         margin-top: -8px;
     }
-
+    
     20%{
         margin-top: -8px;
     }
-
+    
     40%{
         margin-top: -8px;
     }
-
+    
     60%{
         margin-top: -8px;
     }
-
+    
     80%{
         margin-top: -8px;
     }
     81%{
         margin-top: -6px;
     }
-
+    
     100%{
         margin-top: -6px;
     }
@@ -132,12 +189,13 @@ span{
     justify-content: center;
     box-shadow:   0px 0px 25px var(--couleurOmbres);
     background-color: var(--couleurContenant);
-
+    
     transition: 0.3s;
-
+    
     animation: 
+    /* shadowGlow 5s infinite,*/
     flipImg 2s forwards;
-} 
+}
 
 
 
@@ -151,9 +209,9 @@ span{
 }
 
 .filter{
-   filter: brightness(350%)  hue-rotate(130deg);
-   transition: 0.2s;
-   height: 100%;
+    filter: brightness(350%)  hue-rotate(130deg);
+    transition: 0.2s;
+    height: 100%;
 }
 .logo:hover .filter{
     filter: none;
@@ -177,9 +235,20 @@ span{
     box-shadow:   0px 0px 75px var(--couleurOmbres);
     
     animation: 
-    fadeIn 2s;
+    fadeIn 2s,
 }
-
+@keyframes shadowGlow{
+    0%{
+        box-shadow:   0px 0px 75px var(--couleurOmbres);
+    }
+    50%{
+        box-shadow:   0px 0px 200px rgb(3, 80, 116);
+        /*rgb(3, 73, 105);*/
+    }
+    100%{
+        box-shadow:   0px 0px 75px var(--couleurOmbres);    
+    }
+}
 .icone{
     height:15px;
     padding-top:5px;
@@ -197,7 +266,7 @@ section{
     display: flex;
     flex-direction: column;
     padding:20px;
-    margin:5px;
+    margin:30px;
     background-color: rgb(223, 223, 223);
     border: var(--couleurPrincipale) 1px solid;
     justify-content: space-between;
@@ -210,7 +279,282 @@ section{
 .interet{
     font-size: 0.8rem;
     padding: 5px 5px 5px 15px;
+    transition: 0.5s;
+    transform: rotateY(-20deg);
+    margin-right: 50px;
+}
+.interet:hover{
     
+}
+.lampe{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 500px;
+    top: -50px;
+    animation: 
+    balancementX 5s infinite ease-in-out
+    ;
+    transform-origin: top;
+    border-bottom: none;
+    scale: 1.5;
+    border: none;
+}
+.cadreLampe{
+    animation:balancementZ 2s infinite ease-in-out;
+    border: none;
+}
+.fil{
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    left:50%;
+    background: url(textures/zinc-1498-mm-architextures.jpg);
+}
+.bulbe1{
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    left:46%;
+    top: 100px;
+    border-radius: 30px 30px 0 0;
+    background: url(textures/stainless-steel-2500-mm-architextures.jpg);
+    z-index: 3;
+}
+.bulbe2{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left:46%;
+    top: 100px;
+    border-radius: 30px 30px 0 0;
+    background-color: rgb(255, 255, 224);
+    border-bottom: none;
+    box-shadow: inset 0 +5px 10px black;
+    z-index: 2;
+    animation:verre 4s infinite linear
+}
+.ampoule{
+    position: absolute;
+    width: 47px;
+    height: 45px;
+    left:129.5px;
+    top: 130px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 224);
+    box-shadow: inset 0 0 10px black;
+    border: none;
+    z-index: 1;
+    animation:verre 4s infinite linear
+}
+.lumiere{
+    position: absolute;
+    width: 47px;
+    height: 45px;
+    left:129.5px;
+    top: 130px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 0, 0);
+    border: none;
+    z-index: 0;
+    animation: eclairage 4s infinite linear;
+}
+.bg{
+    background: url(images/background.png);    
+    background-size: cover;
+    background-position: 100% 120%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: hue-rotate(10deg);
+    animation: brightness 4s infinite linear;
+    border: none;
+}
+.keyboard{
+    position: absolute;
+    background: url(images/keyboard.png);
+    background-size: 100% 100%;
+    height: 100px;
+    width: 500px;
+    left: 400px;
+    top: 400px;
+}
+.keyboard::before{
+    position: absolute;
+    content:"test";
+    width: 500px;
+    height: 110px;
+    background: url(textures/zinc-1498-mm-architextures.jpg);
+    transform-origin: bottom;
+    transform: rotateX(-80deg);
+}
+.keyboard::after{
+    position: absolute;
+    content:"alors";
+    right: 0px;
+    background: url(textures/zinc-1498-mm-architextures.jpg);
+    width: 100px;
+    height: 110px;
+    transform-origin: right;
+    transform: rotateY(85deg);
+}
+@keyframes brightness{
+    0%{
+        filter: brightness(50%) sepia(0.3) hue-rotate(0);  
+    }
+    
+    50%{
+
+        filter: brightness(75%) sepia(0.3) hue-rotate(-5deg);
+    }
+    
+    100%{
+
+        filter: brightness(50%) sepia(0.3) hue-rotate(0);  
+    }
+}
+@keyframes balancementX{
+    0%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform: rotate(-3deg) ;
+    }
+    
+    100%{
+        transform: rotate(3deg);
+        
+    }
+}
+@keyframes balancementZ {
+    0%{
+        transform: rotateX(0deg);
+        
+    }
+    50%{
+        transform: rotateX(20deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+        
+    }
+}
+@keyframes verre{
+    0%{
+        background-color: rgba(255, 255, 179, 0.192);
+    }
+    50%{
+        background-color: #ffffcb;
+    }
+    100%{
+        background-color: rgba(255, 255, 204, 0.192);
+    }
+}
+@keyframes eclairage {
+    0%{
+        box-shadow: 0 0 0px -0px rgba(255, 252, 232, 0.123);
+    }
+    
+    50%{
+        box-shadow: 0 0 100px 0px rgb(255, 253, 238);
+        
+    }
+    
+    100%{
+        box-shadow: 0 0 0px -0px rgba(255, 253, 241, 0.123);
+    }
+}
+
+.experience{
+    transition: 0.3s;
+    transform:rotateY(20deg);
+}
+.experience,.formation,.competences{
+    background-repeat: repeat;
+    background: linear-gradient(rgb(199, 199, 199) 0px, rgb(201, 201, 201) 1px, white 1px, white 1.2px);
+    background-size: 100% 10px;
+    box-shadow: inset 0 0 35px black;
+    border-radius: 9px;
+    border: 10px solid black;
+    border-bottom: 20px solid black;
+    z-index: 1;
+    animation:scanlines 5s infinite linear;
+}
+.experience::after,.formation::after,.competences::after{
+    content:"";
+    position: relative;
+    width: 50px;
+    height: 70px;
+    
+    background: black;
+    margin: auto;
+    top: 120px;
+    z-index: -10;
+}
+.experience::before,.formation::before,.competences::before{
+    content:"";
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: url(textures/zinc-1498-mm-architextures.jpg);
+    border-radius: 5px;
+    margin: auto;
+    top:115%;
+    z-index: 5;
+}
+.formation::after{
+    width: 50px;
+    height: 90px;
+    top: 120px;
+}
+.competences::after{
+    width: 50px;
+    height: 100px;
+    top: 130px;
+}
+aside>section{
+    border: none;
+}
+.deskContainer{
+    position: absolute;
+    left: 0px;
+    right:0px;
+    perspective: 1000px;
+}
+.desk{
+    width: 100vw;
+    height: 800px;
+    background: url(textures/oak-3275-mm-architextures.jpg);
+    filter: blur(2px) sepia();
+    top: 30vh;
+    transform: rotateX(100deg) ;
+    z-index: 0;
+    position: absolute;
+    animation:brightness 4s infinite linear;
+}
+
+
+@keyframes scanlines{
+    0%{
+        background-position: 100% 0%;
+    }
+    
+    100%{
+        background-position: 100% -10%;
+    }
+}
+.experience:hover{
+}
+.competences{
+    transition: 0.3s;
+    transform:rotateY(-20deg);
+}
+.competences:hover{
+}
+.formation{
+    scale: 98%;
 }
 
 section div,section article,article li, section li{
@@ -285,72 +629,44 @@ div{
 
 
 @media all and (min-width: 850px){
-    .nom{
-        animation:
-        LanscapeSlideBottom 2s,
-        fadeIn 2s;
-    }
     main{
         display: flex;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     header{
         margin-bottom:50px;
     }
-    .portrait{
-        animation:
-        LandscapeSlideBottom 0.8s,
-        fadeIn 2s;
-    }
-    .sansPuce{
-        animation:
-        LandscapeSlideRight 1s,
-        fadeIn 2s;
-    }
-    .nom{
-        animation:
-        LandscapeSlideLeft 1s,
-        fadeIn 2s;
-    }
+    
     section{
         background: linear-gradient( 30deg,white , white, var(--couleurEffet) , white,white) left;
         background-size: 900%;
     }
+    section.experience{
+    }
     section:nth-child(1){
         margin-right:+250px;
-        opacity: 0;
-        animation: 
-        LandscapeSlideLeft 0.8s 1s forwards,
-        BlackAndWhite 0.8s  2s forwards,
-        fadeIn 0.8s 1s ease-in forwards;
     }
+    
     section:nth-child(2){
-        opacity: 0;
-        animation: 
-        BlackAndWhite 0.8s  2s forwards,
-        fadeIn 0.8s 1s ease-in forwards;
+        
     }
     
     section:nth-child(3){
         margin-left:+250px;
-        opacity: 0;
-        animation: 
-        LandscapeSlideRight 0.8s 1s forwards,
-        BlackAndWhite 0.8s  2s forwards,
-        fadeIn 0.8s 1s ease-in forwards;
-        
     }
-
-
-
+    
+    
+    
     /*
-@keyframes LandscapeSlideLeft{
-    from{margin-right:+250px} to{};
-}
-@keyframes LandscapeSlideRight{
-    from{margin-left:+250px} to{};
-}
+    @keyframes LandscapeSlideLeft{
+        from{margin-right:+250px} to{};
+    }
+    @keyframes LandscapeSlideRight{
+        from{margin-left:+250px} to{};
+    }
     */
-
+    
     
 }
 
@@ -364,29 +680,14 @@ div{
         flex-direction: column;
     }
     
-    .sansPuce:nth-child(1){
-        animation : 
-        PortraitSlideRight 1.5s forwards,
-        fadeIn 1.5s forwards;
-    }
-    .sansPuce:nth-child(2){
-        
-        animation :
-        PortraitSlideLeft 1.5s,
-        fadeIn 1.5s;
-    }
-    .sansPuce:nth-child(3){
-        animation : 
-        PortraitSlideRight 1.5s forwards,
-        fadeIn 1.5s forwards;
-    }
-    .nom{
-        animation:fadeIn 2s;
-    }
     
     section{
         background: linear-gradient( 30deg,white , white, var(--couleurEffet) , white,white) left;
         background-size: 900%;
+    }
+    .experience,.competences,.formation{
+        transform: none;
+        scale: 100%;
     }
     .blank{
         background: linear-gradient(var(--couleurPrincipale));
@@ -399,10 +700,6 @@ div{
         BlackAndWhite 0.8s  1s forwards,
         fadeIn 0.8s ease-in forwards;
     }
-    
-    
-    
-    
 }
 
 
