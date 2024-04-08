@@ -7,22 +7,27 @@
 
     <title>CV Nils Gouraud</title>
     <!-- <link rel="stylesheet" href="CV.css" /> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css" />
   </head>
-  <body id="root" class="bg-emerald-900 text-white">
+  <body
+    id="root"
+    class="bg-emerald-900 text-white dark:text-black dark:bg-slate-200"
+  >
     <header
-      class="flex justify-around items-center border-b-4 bg-emerald-950 border-teal-950 fixed w-full"
+      class="transition-all flex justify-around items-center border-b-4 bg-emerald-950 border-teal-950 fixed w-full dark:border-slate-400 dark:bg-slate-300"
     >
-      <div class="text-3xl cursor-pointer">Nils Gouraud</div>
+      <div class="text-3xl cursor-pointer">
+        <a href="#accueil">Nils Gouraud</a>
+      </div>
       <div></div>
       <nav class="h-full flex justify-around items-center text-lg">
         <a
-          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
+          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all hidden md:block"
           href="#accueil"
           >Accueil</a
         >
         <a
-          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
+          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all hidden md:block"
           href="#compétences"
           >Compétences</a
         >
@@ -38,15 +43,17 @@
         >
         <div></div>
         <button class="cursor-pointer">
-          <label for="darkMode" class="cursor-pointer">mode sombre</label>
+          <label for="darkMode" class="cursor-pointer text-xs md:text-base"
+            >mode sombre</label
+          >
         </button>
         <label
           class="cursor-pointer scale-75 relative inline-flex items-center cursor-pointer"
         >
           <input
             type="checkbox"
+            checked
             onclick="{
-                alert('fonctionalité à venir')
                 let root=document.getElementById('root');
                 if(root.classList.contains('dark')){
                     root.classList.remove('dark');
@@ -64,21 +71,32 @@
         </label>
       </nav>
     </header>
-    <main>
+    <main class="transition-all">
       <section
         id="accueil"
-        class="pt-24 flex justify-around items-center p-6 shadow-2xl"
+        class="transition-all pt-24 flex justify-around items-center p-6 shadow-2xl dark:shadow-none"
       >
         <img
           src="images/portrait.png"
           alt="portrait"
-          class="size-40 p-2"
+          class="size-40 p-2 dark:hidden"
           style="
             border-radius: 50px;
             background: linear-gradient(145deg, #054635, #06533f);
             box-shadow: 12px 12px 0px #043226, -12px -12px 0px #086a50;
           "
         />
+        <img
+          src="images/portrait.png"
+          alt="portrait"
+          class="size-40 p-2 hidden dark:block"
+          style="
+            border-radius: 50px;
+            background: linear-gradient(145deg, #b7c0cb, #d9e4f1);
+            box-shadow: 12px 12px 0px #828890, -12px -12px 0px #ffffff;
+          "
+        />
+
         <span class="text-sm mx-40 block">
           <q>
             Actuellement en reconversion professionnelle, je me forme au
@@ -88,17 +106,25 @@
           <div class="dialogue"></div>
         </span>
       </section>
-      <section id="compétences" class="p-4 shadow-2xl">
-        <div class="flex items-center mb-4 text-2xl">
+      <section
+        id="compétences"
+        class="transition-all shadow-2xl dark:bg-slate-300 dark:shadow-none"
+      >
+        <div class="flex items-center mb-4 text-2xl dark:bg-slate-300">
           <div>Compétences</div>
-          <div class="h-0 mx-2 border border-white w-full"></div>
+          <div
+            class="h-0 mx-2 border border-white w-full dark:border-black"
+          ></div>
         </div>
 
-        <article class="mb-4">
+        <article class="mb-4 px-4 pb-4 dark:bg-slate-300">
           <span class="px-2 text-xl mb-0 block">Développement web</span>
+
           <br />
           <div class="flex justify-around flex-col lg:flex-row">
-            <div class="bg-emerald-950 p-6 rounded-lg my-6 lg:my-0">
+            <div
+              class="bg-emerald-950 dark:bg-slate-200 p-6 rounded-lg my-6 lg:my-0"
+            >
               <span class="text-xl mb-0 block">Langages=[</span>
               <li class="text-md list-none m2-2 flex">
                 HTML & CSS
@@ -124,13 +150,15 @@
                 SQL
                 <img
                   src="images/db.png"
-                  class="h-6 w-6 rounded-md mx-2 invert"
+                  class="transition-all h-6 w-6 rounded-md mx-2 invert dark:invert-0"
                   alt=""
                 />,
               </li>
               ]
             </div>
-            <div class="bg-emerald-950 p-6 rounded-lg my-6 lg:my-0">
+            <div
+              class="bg-emerald-950 dark:bg-slate-200 p-6 rounded-lg my-6 lg:my-0"
+            >
               <span class="text-xl mb-0 block text-green-700">
                 <span class="text-sm">/*</span>
                 Frameworks
@@ -187,7 +215,9 @@
               </li>
             </div>
 
-            <div class="bg-emerald-950 p-6 rounded-lg my-6 lg:my-0">
+            <div
+              class="bg-emerald-950 dark:bg-slate-200 p-6 rounded-lg my-6 lg:my-0"
+            >
               <span class="text-green-700"> <<span>!--</span> autres -->></span>
               <br />
               <li class="text-lg list-none m2-2 flex items-center">
@@ -218,11 +248,13 @@
           </div>
         </article>
 
-        <article class="mt-20">
+        <article class="mt-20 px-4 pb-4 dark:bg-slate-400">
           <div class="">Langues</div>
           <div class="flex justify-around items-center">
             <a href="https://fr.wikipedia.org/wiki/Assimil" target="_blank">
-              <div class="bg-emerald-950 p-2 rounded-lg max-w-48">
+              <div
+                class="bg-emerald-950 dark:bg-slate-200 p-2 rounded-lg max-w-48"
+              >
                 <li class="text-sm list-none flex flex-col items-center">
                   <img
                     src="images/anglais.png"
@@ -240,7 +272,9 @@
               href="https://it.wikipedia.org/wiki/Vittoria_di_Pirro"
               target="_blank"
             >
-              <div class="bg-emerald-950 p-2 rounded-lg max-w-96">
+              <div
+                class="bg-emerald-950 dark:bg-slate-200 p-2 rounded-lg max-w-96"
+              >
                 <li class="text-sm list-none flex flex-col items-center">
                   <img
                     src="images/italien.png"
@@ -259,13 +293,18 @@
         </article>
       </section>
 
-      <section id="portfolio" class="p-4 shadow-2xl">
+      <section
+        id="portfolio"
+        class="transition-all py-4 shadow-2xl dark:shadow-none dark:bg-neutral-200"
+      >
         <div class="flex items-center mb-4 text-2xl">
           <div>Portfolio</div>
-          <div class="h-0 mx-2 border border-white w-full"></div>
+          <div
+            class="h-0 mx-2 border border-white w-full dark:border-black"
+          ></div>
         </div>
         <article
-          class="flex flex-col lg:flex-row items-center bg-emerald-950 my-20 rounded-md"
+          class="flex flex-col lg:flex-row items-center bg-emerald-950 my-20 rounded-md dark:bg-neutral-300"
         >
           <a
             href="https://nilsgouraudtopshoppingcart.vercel.app/"
@@ -275,22 +314,24 @@
               class="h-md w-lg flex flex-col items-center p-4 hover:scale-110 transition-all"
             >
               <img src="images/nile.png" alt="Nile img" class="rounded-t-lg" />
-              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+              <div
+                class="w-full bg-black text-center text-xl rounded-b-lg dark:bg-neutral-100"
+              >
                 Nile
               </div>
             </div>
           </a>
-          <p class="m-4 p-6 bg-black rounded-lg">
+          <p class="m-4 p-6 bg-black rounded-lg dark:bg-neutral-100">
             Un site de vente en ligne factice, réalisé avec React. Le site tire
             ses données de
             <a
-              class="text-blue-300 underline visited:text-purple-500"
+              class="text-blue-500 underline visited:text-purple-500"
               href="https://fakestoreapi.com/"
               >fakestoreapi.com</a
             >
             et utilise la bibliothèque
             <a
-              class="text-blue-300 underline visited:text-purple-500"
+              class="text-blue-500 underline visited:text-purple-500"
               href="https://gijsroge.github.io/tilt.js/"
               >Tilt.js</a
             >
@@ -298,7 +339,7 @@
           </p>
         </article>
         <article
-          class="flex flex-col lg:flex-row items-center bg-emerald-950 my-20 rounded-md"
+          class="flex flex-col lg:flex-row items-center bg-emerald-950 my-20 rounded-md dark:bg-neutral-300"
         >
           <a href="https://nilsgouraud.github.io/TOPWeatherApp" target="_blank">
             <div
@@ -309,21 +350,23 @@
                 alt="Nile img"
                 class="rounded-t-lg h-72 rounded-t-lg"
               />
-              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+              <div
+                class="w-full bg-black text-center text-xl rounded-b-lg dark:bg-neutral-100"
+              >
                 TOPWeatherApp
               </div>
             </div>
           </a>
-          <p class="m-4 p-6 bg-black rounded-lg">
+          <p class="m-4 p-6 bg-black rounded-lg dark:bg-neutral-100">
             Un site de prévision météo à 3 jours. Le site tire ses données de
             <a
-              class="text-blue-300 underline visited:text-purple-500 h-72 rounded-t-lg"
+              class="text-blue-500 underline visited:text-purple-500 h-72 rounded-t-lg"
               href="https://www.weatherapi.com/"
               target="_blank"
               >weatherapi.com</a
             >, et il utilise la bibliothèque
             <a
-              class="text-blue-300 underline visited:text-purple-500"
+              class="text-blue-500 underline visited:text-purple-500"
               href="https://github.com/mrdoob/three.js/blob/dev/README.md"
               target="_blank"
               >Three.js</a
@@ -333,7 +376,7 @@
           </p>
         </article>
         <article
-          class="flex flex-col lg:flex-row justify-around items-center bg-emerald-950 my-20 rounded-md"
+          class="flex flex-col lg:flex-row justify-around items-center bg-emerald-950 my-20 rounded-md dark:bg-neutral-300"
         >
           <a href="https://essai-threejs.vercel.app/" target="_blank">
             <div
@@ -344,22 +387,24 @@
                 alt="essai img"
                 class="h-72 rounded-t-lg"
               />
-              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+              <div
+                class="w-full bg-black text-center text-xl rounded-b-lg dark:bg-neutral-100"
+              >
                 Essai
               </div>
             </div>
           </a>
 
-          <p class="m-4 p-6 bg-black rounded-lg">
+          <p class="m-4 p-6 bg-black rounded-lg dark:bg-neutral-100">
             Une représentation du système solaire réalisée avec
             <a
-              class="text-blue-300 underline visited:text-purple-500"
+              class="text-blue-500 underline visited:text-purple-500"
               href="https://github.com/mrdoob/three.js/blob/dev/README.md"
               target="_blank"
               >Three.js</a
             >. Les textures proviennent de
             <a
-              class="text-blue-300 underline visited:text-purple-500"
+              class="text-blue-500 underline visited:text-purple-500"
               href="https://planetpixelemporium.com/"
               target="_blank"
             >
@@ -368,7 +413,7 @@
           </p>
         </article>
         <article
-          class="flex flex-col lg:flex-row items-center bg-emerald-950 my-20 justify-around rounded-md"
+          class="flex flex-col lg:flex-row items-center bg-emerald-950 my-20 justify-around rounded-md dark:bg-neutral-300"
         >
           <a href="https://nilsgouraudcvapp.vercel.app" target="_blank">
             <div
@@ -379,23 +424,27 @@
                 alt="Nile img"
                 class="rounded-t-lg h-72"
               />
-              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+              <div
+                class="w-full bg-black text-center text-xl rounded-b-lg dark:bg-neutral-100"
+              >
                 CV App
               </div>
             </div>
           </a>
-          <p class="m-4 p-6 bg-black rounded-lg">
+          <p class="m-4 p-6 bg-black rounded-lg dark:bg-neutral-100">
             Un site de création de CV réalisé avec React. Le site permet
             d'exporter au format PDF le CV créé.
           </p>
         </article>
       </section>
     </main>
-    <footer class="p-4">
+    <footer class="p-4 transition-all bg-emerald-950 dark:bg-slate-400">
       <address id="contact" class="not-italic">
         <div class="flex items-center mb-4 text-2xl">
           <div>Contact</div>
-          <div class="h-0 mx-2 border border-white w-full"></div>
+          <div
+            class="h-0 mx-2 border border-white w-full dark:border-black"
+          ></div>
         </div>
         <div class="flex justify-around">
           <div class="flex flex-col">
