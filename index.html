@@ -9,7 +9,7 @@
     <!-- <link rel="stylesheet" href="CV.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-emerald-900 text-white">
+  <body id="root" class="bg-emerald-900 text-white">
     <header
       class="flex justify-around items-center border-b-4 bg-emerald-950 border-teal-950 fixed w-full"
     >
@@ -45,7 +45,15 @@
         >
           <input
             type="checkbox"
-            onclick="alert('fonctionalité à venir')"
+            onclick="{
+                alert('fonctionalité à venir')
+                let root=document.getElementById('root');
+                if(root.classList.contains('dark')){
+                    root.classList.remove('dark');
+                }   else{             
+                root.classList.add('dark');
+                }
+            }"
             value=""
             class="sr-only peer"
             id="darkMode"
@@ -129,33 +137,42 @@
                 <span class="text-sm">*/</span>
               </span>
               <li class="text-md list-none m2-2 flex items-end text-orange-600">
-                <span class="text-xs block text-white">import </span>&nbsp;
-                "React"&nbsp;
-                <span class="text-xs block text-white"> from</span>
+                <span class="text-xs block text-white dark:text-black"
+                  >import </span
+                >&nbsp; "React"&nbsp;
+                <span class="text-xs block text-white dark:text-black">
+                  from</span
+                >
                 <a href="https://react.dev" target="_blank">
                   <img
                     src="images/react.svg"
                     class="h-6 w-6 rounded-md mx-2"
                     alt=""
                   /> </a
-                ><span class="text-white">;</span>
+                ><span class="text-white dark:text-black">;</span>
               </li>
               <li class="text-md list-none m2-2 flex items-end text-orange-600">
-                <span class="text-xs block text-white">import </span>&nbsp;
-                "Tailwind"&nbsp;
-                <span class="text-xs block text-white"> from</span>
+                <span class="text-xs block text-white dark:text-black"
+                  >import </span
+                >&nbsp; "Tailwind"&nbsp;
+                <span class="text-xs block text-white dark:text-black">
+                  from</span
+                >
                 <a href="https://tailwindcss.com/" target="_blank">
                   <img
                     src="images/tailwindcss.png"
                     class="h-6 w-6 rounded-md mx-2"
                     alt=""
                   /> </a
-                ><span class="text-white">;</span>
+                ><span class="text-white dark:text-black">;</span>
               </li>
               <li class="text-md list-none m2-2 flex items-end text-orange-600">
-                <span class="text-xs block text-white">import </span>&nbsp;
-                "Three.js"&nbsp;
-                <span class="text-xs block text-white"> from</span>
+                <span class="text-xs block text-white dark:text-black"
+                  >import </span
+                >&nbsp; "Three.js"&nbsp;
+                <span class="text-xs block text-white dark:text-black">
+                  from</span
+                >
                 <a
                   href="https://github.com/mrdoob/three.js/blob/dev/README.md"
                   target="_blank"
@@ -166,7 +183,7 @@
                     alt=""
                     href="threejs.org"
                   /> </a
-                ><span class="text-white">;</span>
+                ><span class="text-white dark:text-black">;</span>
               </li>
             </div>
 
