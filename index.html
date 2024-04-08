@@ -71,10 +71,10 @@
         </label>
       </nav>
     </header>
-    <main class="transition-all">
+    <main class="transition-all px-0">
       <section
         id="accueil"
-        class="transition-all pt-24 flex justify-around items-center p-6 shadow-2xl dark:shadow-none"
+        class="transition-all pt-24 flex justify-around items-center p-6 shadow-2xl dark:shadow-none md:px-40 2xl:px-80"
       >
         <img
           src="images/portrait.png"
@@ -97,7 +97,7 @@
           "
         />
 
-        <span class="text-sm mx-40 block">
+        <span class="text-sm mx-4 md:mx-40 block">
           <q>
             Actuellement en reconversion professionnelle, je me forme au
             développement informatique au CNAM et je souhaite mettre en pratique
@@ -108,7 +108,7 @@
       </section>
       <section
         id="compétences"
-        class="transition-all shadow-2xl dark:bg-slate-300 dark:shadow-none"
+        class="transition-all shadow-2xl dark:bg-slate-300 dark:shadow-none md:px-40 2xl:px-80"
       >
         <div class="flex items-center mb-4 text-2xl dark:bg-slate-300">
           <div>Compétences</div>
@@ -253,7 +253,7 @@
           <div class="flex justify-around items-center">
             <a href="https://fr.wikipedia.org/wiki/Assimil" target="_blank">
               <div
-                class="bg-emerald-950 dark:bg-slate-200 p-2 rounded-lg max-w-48"
+                class="bg-emerald-950 dark:bg-slate-200 mr-2 md:mr-0 p-2 rounded-lg max-w-48"
               >
                 <li class="text-sm list-none flex flex-col items-center">
                   <img
@@ -295,7 +295,7 @@
 
       <section
         id="portfolio"
-        class="transition-all py-4 shadow-2xl dark:shadow-none dark:bg-neutral-200"
+        class="transition-all py-4 shadow-2xl dark:shadow-none dark:bg-neutral-200 md:px-40 2xl:px-80"
       >
         <div class="flex items-center mb-4 text-2xl">
           <div>Portfolio</div>
@@ -453,28 +453,22 @@
                 <span class="text-xs">vous pouvez me joindre au :</span>
                 07.50.98.29.62
               </div>
-              <!-- <img
-                class="size-4 invert ml-2"
-                src="images/téléphone.png"
-                alt="téléphone"
-              /> -->
             </article>
             <article class="flex py-2 px-2">
               <div>
                 <span class="text-xs">ou m'écrire à l'adresse suivante : </span
                 >gouraud.nils@gmail.com
               </div>
-              <!-- <img
-                class="size-4 invert ml-2"
-                src="images/email.png"
-                alt="email"
-              /> -->
             </article>
           </div>
 
           <article class="flex">
             <div>Cholet</div>
-            <img class="size-4 invert ml-2" src="images/lieu.png" alt="lieu" />
+            <img
+              class="size-4 invert ml-2 dark:invert-0"
+              src="images/lieu.png"
+              alt="lieu"
+            />
           </article>
         </div>
       </address>
