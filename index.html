@@ -9,22 +9,60 @@
     <!-- <link rel="stylesheet" href="CV.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <div>Nils Gouraud</div>
-      <nav>
-        <a href="">Accueil</a>
-        <a href="">Compétences</a>
-        <a href="">Portfolio</a>
-        <a href="">Contact</a>
-        <a href=""></a>
-        <button>mode sombre</button>
+  <body class="bg-emerald-900 text-white">
+    <header
+      class="flex justify-around items-center border-b-2 bg-emerald-950 border-emerald-950"
+    >
+      <div class="text-2xl cursor-pointer">Nils Gouraud</div>
+      <div></div>
+      <nav class="h-full flex justify-around items-center text-lg">
+        <a
+          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
+          href="#accueil"
+          >Accueil</a
+        >
+        <a
+          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
+          href="#compétences"
+          >Compétences</a
+        >
+        <a
+          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
+          href="#portfolio"
+          >Portfolio</a
+        >
+        <a
+          class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
+          href="#contact"
+          >Contact</a
+        >
+        <div></div>
+        <button class="cursor-pointer">
+          <label for="darkMode" class="cursor-pointer">mode sombre</label>
+        </button>
+        <label
+          class="cursor-pointer scale-75 relative inline-flex items-center cursor-pointer"
+        >
+          <input type="checkbox" value="" class="sr-only peer" id="darkMode" />
+          <div
+            class="peer ring-0 bg-rose-400 rounded-full outline-none duration-300 after:duration-500 w-12 h-12 shadow-md peer-checked:bg-emerald-500 peer-focus:outline-none after:content-['✖️'] after:rounded-full after:absolute after:outline-none after:h-10 after:w-10 after:bg-gray-50 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-hover:after:scale-75 peer-checked:after:content-['✔️'] after:-rotate-180 peer-checked:after:rotate-0"
+          ></div>
+        </label>
       </nav>
     </header>
     <main>
-      <section id="accueil">
-        <img src="images/portrait.png" alt="portrait" class="portrait" />
-        <span>
+      <section id="accueil" class="flex justify-around items-center p-6">
+        <img
+          src="images/portrait.png"
+          alt="portrait"
+          class="size-40 p-2"
+          style="
+            border-radius: 50px;
+            background: linear-gradient(145deg, #054635, #06533f);
+            box-shadow: 12px 12px 0px #043226, -12px -12px 0px #086a50;
+          "
+        />
+        <span class="text-sm mx-40 block">
           <q>
             Actuellement en reconversion professionnelle, je me forme au
             développement informatique au CNAM et je souhaite mettre en pratique
@@ -33,36 +71,170 @@
           <div class="dialogue"></div>
         </span>
       </section>
-      <section id="compétences">
-        <div>Compétences</div>
+      <section id="compétences" class="p-4">
+        <div class="flex items-center mb-4 text-xl">
+          <div>Compétences</div>
+          <div class="h-0 mx-2 border border-white w-full"></div>
+        </div>
 
-        <article>développmenet web</article>
-        <li>développement web frontal (HTML, CSS, JavaScript)</li>
+        <article class="">
+          <span class="px-2 text-lg mb-0 block">Développment web</span>
+          <div class="flex justify-around">
+            <div class="bg-emerald-950 p-6 rounded-lg">
+              <span class="text-lg mb-0 block">Langages=[</span>
+              <li class="text-sm list-none m2-2 flex">
+                HTML & CSS
+                <img
+                  src="images/css.png"
+                  class="h-6 w-6 rounded-md ml-2"
+                  alt=""
+                /><img
+                  src="images/html.png"
+                  class="h-6 w-6 rounded-md mr-2"
+                  alt=""
+                />,
+              </li>
+              <li class="text-sm list-none m2-2 flex">
+                JavaScript
+                <img
+                  src="images/js.png"
+                  class="h-6 w-6 rounded-md mx-2"
+                  alt=""
+                />,
+              </li>
+              <li class="text-sm list-none m2-2 flex">
+                SQL
+                <img
+                  src="images/db.png"
+                  class="h-6 w-6 rounded-md mx-2 invert"
+                  alt=""
+                />,
+              </li>
+              ]
+            </div>
+            <div class="bg-emerald-950 p-6 rounded-lg">
+              <span class="text-lg mb-0 block">Frameworks</span>
+              <li class="text-sm list-none m2-2 flex">
+                "React" <span class="text-xs">from</span>
+                <a href="https://react.dev">
+                  <img
+                    src="images/react.svg"
+                    class="h-6 w-6 rounded-md mx-2"
+                    alt=""
+                  /> </a
+                >;
+              </li>
+              <li class="text-sm list-none m2-2 flex">
+                "Tailwind" <span class="text-xs">from</span>
+                <a href="https://tailwindcss.com/">
+                  <img
+                    src="images/tailwindcss.png"
+                    class="h-6 w-6 rounded-md mx-2"
+                    alt=""
+                  /> </a
+                >;
+              </li>
+              <li class="text-sm list-none m2-2 flex">
+                "Three.js" <span class="text-xs">from</span>
+                <a href="https://github.com/mrdoob/three.js/blob/dev/README.md">
+                  <img
+                    src="images/threejs.png"
+                    class="h-6 w-6 rounded-md mx-2 invert"
+                    alt=""
+                    href="threejs.org"
+                  /> </a
+                >;
+              </li>
+            </div>
+
+            <div class="bg-emerald-950 p-6 rounded-lg">
+              autres
+              <br />
+              <li class="text-sm list-none m2-2 flex">
+                Git
+                <img
+                  src="images/git.png"
+                  class="h-6 w-6 rounded-md mx-2"
+                  alt=""
+                />
+              </li>
+              <li class="text-sm list-none m2-2 flex">
+                Parcel
+                <img
+                  src="images/parcel.avif"
+                  class="h-6 w-6 rounded-md mx-2"
+                  alt=""
+                />
+              </li>
+            </div>
+          </div>
+        </article>
 
         <article>
-          programmation en Java
-          <li>gestion de bases de données (SQL avec mySQL) via PHP</li>
-          <li>utilisation de Git et GitHub</li>
+          langues
+          <li class="text-base list-none">
+            Anglais courant
+            <img
+              src="images/anglais.png"
+              class="h-6 w-6 rounded-md mx-2"
+              alt=""
+            />
+          </li>
+          <li class="text-base list-none">
+            Italien basique
+            <img
+              src="images/italien.png"
+              class="h-6 w-6 rounded-md mx-2"
+              alt=""
+            />
+          </li>
         </article>
       </section>
 
-      <section id="portfolio">
-        <div>Portfolio</div>
+      <section id="portfolio" class="p-4">
+        <div class="flex items-center mb-4 text-xl">
+          <div>Portfolio</div>
+          <div class="h-0 mx-2 border border-white w-full"></div>
+        </div>
       </section>
     </main>
-    <footer>
-      <address id="contact">
-        <article class="sansPuce">
-          <img class="icone" src="images/téléphone.png" alt="téléphone" />
-          07.50.98.29.62
-        </article>
-        <article class="sansPuce">
-          <img class="icone" src="images/lieu.png" alt="lieu" /> Cholet
-        </article>
-        <article class="sansPuce">
-          <img class="icone" src="images/email.png" alt="email" />
-          gouraud.nils@gmail.com
-        </article>
+    <footer class="p-4">
+      <address id="contact" class="not-italic">
+        <div class="flex items-center mb-4 text-xl">
+          <div>Contact</div>
+          <div class="h-0 mx-2 border border-white w-full"></div>
+        </div>
+        <div class="flex justify-around">
+          <div class="flex flex-col">
+            <article class="flex">
+              <div>
+                <span class="text-xs">vous pouvez me joindre au :</span>
+                07.50.98.29.62
+              </div>
+              <!-- <img
+                class="size-4 invert ml-2"
+                src="images/téléphone.png"
+                alt="téléphone"
+              /> -->
+            </article>
+            <article class="flex py-2 px-2">
+              <div>
+                <span class="text-xs">ou m'écrire à l'adresse suivante : </span
+                >gouraud.nils@gmail.com
+              </div>
+              <!-- <img
+                class="size-4 invert ml-2"
+                src="images/email.png"
+                alt="email"
+              /> -->
+            </article>
+          </div>
+
+          <article class="flex">
+            <div>Cholet</div>
+            <img class="size-4 invert ml-2" src="images/lieu.png" alt="lieu" />
+          </article>
+        </div>
       </address>
     </footer>
   </body>
