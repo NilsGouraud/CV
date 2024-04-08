@@ -11,11 +11,11 @@
   </head>
   <body class="bg-emerald-900 text-white">
     <header
-      class="flex justify-around items-center border-b-2 bg-emerald-950 border-emerald-950"
+      class="flex justify-around items-center border-b-4 bg-emerald-950 border-teal-950 fixed w-full"
     >
-      <div class="text-2xl cursor-pointer">Nils Gouraud</div>
+      <div class="text-3xl cursor-pointer">Nils Gouraud</div>
       <div></div>
-      <nav class="h-full flex justify-around items-center text-lg">
+      <nav class="h-full flex justify-around items-center text-lg scale-150">
         <a
           class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
           href="#accueil"
@@ -51,7 +51,10 @@
       </nav>
     </header>
     <main>
-      <section id="accueil" class="flex justify-around items-center p-6">
+      <section
+        id="accueil"
+        class="pt-24 flex justify-around items-center p-6 shadow-2xl"
+      >
         <img
           src="images/portrait.png"
           alt="portrait"
@@ -71,16 +74,17 @@
           <div class="dialogue"></div>
         </span>
       </section>
-      <section id="compétences" class="p-4">
-        <div class="flex items-center mb-4 text-xl">
+      <section id="compétences" class="p-4 shadow-2xl">
+        <div class="flex items-center mb-4 text-2xl">
           <div>Compétences</div>
           <div class="h-0 mx-2 border border-white w-full"></div>
         </div>
 
         <article class="mb-4">
-          <span class="px-2 text-lg mb-0 block">Développment web</span>
+          <span class="px-2 text-xl mb-0 block">Développement web</span>
+          <br />
           <div class="flex justify-around">
-            <div class="bg-emerald-950 p-6 rounded-lg">
+            <div class="bg-emerald-950 p-6 rounded-lg scale-125">
               <span class="text-lg mb-0 block">Langages=[</span>
               <li class="text-sm list-none m2-2 flex">
                 HTML & CSS
@@ -112,7 +116,7 @@
               </li>
               ]
             </div>
-            <div class="bg-emerald-950 p-6 rounded-lg">
+            <div class="bg-emerald-950 p-6 rounded-lg scale-125">
               <span class="text-lg mb-0 block text-green-700">
                 <span class="text-sm">/*</span>
                 Frameworks
@@ -157,7 +161,7 @@
               </li>
             </div>
 
-            <div class="bg-emerald-950 p-6 rounded-lg">
+            <div class="bg-emerald-950 p-6 rounded-lg scale-125">
               <span class="text-green-700"> <<span>!--</span> autres -->></span>
               <br />
               <li class="text-sm list-none m2-2 flex">
@@ -188,50 +192,178 @@
           </div>
         </article>
 
-        <article class="mb-4">
+        <article class="mt-20">
           <div class="">Langues</div>
           <div class="flex justify-around items-center">
-            <div class="bg-emerald-950 p-2 rounded-lg max-w-96">
-              <li class="text-sm list-none">
-                <img
-                  src="images/anglais.png"
-                  class="h-10 w-10 rounded-md mx-2"
-                  alt=""
-                />
-                Anglais courant
-                <i class="text-xs block"
-                  >Surely this will suffice. How rich can my tailor be?</i
-                >
-              </li>
-            </div>
-            <div class="bg-emerald-950 p-2 rounded-lg max-w-96">
-              <li class="text-sm list-none">
-                <img
-                  src="images/italien.png"
-                  class="h-10 w-10 rounded-md mx-2"
-                  alt=""
-                />
-                Italien basique
-                <i class="text-xs block"
-                  >Cioè, spero che non sara necessario. Ancora una frase come
-                  quella e sono perso.</i
-                >
-              </li>
-            </div>
+            <a href="https://fr.wikipedia.org/wiki/Assimil" target="_blank">
+              <div class="bg-emerald-950 p-2 rounded-lg max-w-48">
+                <li class="text-sm list-none flex flex-col items-center">
+                  <img
+                    src="images/anglais.png"
+                    class="h-10 w-10 rounded-md mx-2"
+                    alt=""
+                  />
+                  Anglais courant
+                  <i class="text-xs block text-center"
+                    >Surely this will suffice. How rich can my tailor be?</i
+                  >
+                </li>
+              </div>
+            </a>
+            <a
+              href="https://it.wikipedia.org/wiki/Vittoria_di_Pirro"
+              target="_blank"
+            >
+              <div class="bg-emerald-950 p-2 rounded-lg max-w-96">
+                <li class="text-sm list-none flex flex-col items-center">
+                  <img
+                    src="images/italien.png"
+                    class="h-10 w-10 rounded-md mx-2"
+                    alt=""
+                  />
+                  Italien basique
+                  <i class="text-xs block text-center"
+                    >Cioè, spero che non sara necessario. Ancora una frase come
+                    quella e sono perso.</i
+                  >
+                </li>
+              </div>
+            </a>
           </div>
         </article>
       </section>
 
-      <section id="portfolio" class="p-4">
-        <div class="flex items-center mb-4 text-xl">
+      <section id="portfolio" class="p-4 shadow-2xl">
+        <div class="flex items-center mb-4 text-2xl">
           <div>Portfolio</div>
           <div class="h-0 mx-2 border border-white w-full"></div>
         </div>
+        <article class="flex items-center bg-emerald-950 my-20 rounded-md">
+          <a
+            href="https://nilsgouraudtopshoppingcart.vercel.app/"
+            target="_blank"
+          >
+            <div
+              class="h-md w-lg flex flex-col items-center p-4 hover:scale-110 transition-all"
+            >
+              <img src="images/nile.png" alt="Nile img" class="rounded-t-lg" />
+              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+                Nile
+              </div>
+            </div>
+          </a>
+          <p class="m-4 p-6 bg-black rounded-lg">
+            Un site de vente en ligne factice, réalisé avec React. Le site tire
+            ses données de
+            <a
+              class="text-blue-300 underline visited:text-purple-500"
+              href="https://fakestoreapi.com/"
+              >fakestoreapi.com</a
+            >
+            et utilise la bibliothèque
+            <a
+              class="text-blue-300 underline visited:text-purple-500"
+              href="https://gijsroge.github.io/tilt.js/"
+              >Tilt.js</a
+            >
+            pour créer un effet de parallaxe.
+          </p>
+        </article>
+        <article class="flex items-center bg-emerald-950 my-20 rounded-md">
+          <a href="https://nilsgouraud.github.io/TOPWeatherApp" target="_blank">
+            <div
+              class="h-md w-lg flex flex-col items-center p-4 hover:scale-110 transition-all"
+            >
+              <img
+                src="images/TOPWeatherApp.png"
+                alt="Nile img"
+                class="rounded-t-lg h-72 rounded-t-lg"
+              />
+              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+                TOPWeatherApp
+              </div>
+            </div>
+          </a>
+          <p class="m-4 p-6 bg-black rounded-lg">
+            Un site de prévision météo à 3 jours. Le site tire ses données de
+            <a
+              class="text-blue-300 underline visited:text-purple-500 h-72 rounded-t-lg"
+              href="https://www.weatherapi.com/"
+              target="_blank"
+              >weatherapi.com</a
+            >, et il utilise la bibliothèque
+            <a
+              class="text-blue-300 underline visited:text-purple-500"
+              href="https://github.com/mrdoob/three.js/blob/dev/README.md"
+              target="_blank"
+              >Three.js</a
+            >
+            afin d'afficher sur une carte la position de la ville dont on
+            affiche les prévisions.
+          </p>
+        </article>
+        <article
+          class="flex justify-around items-center bg-emerald-950 my-20 rounded-md"
+        >
+          <a href="https://essai-threejs.vercel.app/" target="_blank">
+            <div
+              class="h-sm w-md flex flex-col items-center p-4 hover:scale-110 transition-all"
+            >
+              <img
+                src="images/essai.png"
+                alt="essai img"
+                class="h-72 rounded-t-lg"
+              />
+              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+                Essai
+              </div>
+            </div>
+          </a>
+
+          <p class="m-4 p-6 bg-black rounded-lg">
+            Une représentation du système solaire réalisée avec
+            <a
+              class="text-blue-300 underline visited:text-purple-500"
+              href="https://github.com/mrdoob/three.js/blob/dev/README.md"
+              target="_blank"
+              >Three.js</a
+            >. Les textures proviennent de
+            <a
+              class="text-blue-300 underline visited:text-purple-500"
+              href="https://planetpixelemporium.com/"
+              target="_blank"
+            >
+              planetpixelemporium.com
+            </a>
+          </p>
+        </article>
+        <article
+          class="flex items-center bg-emerald-950 my-20 justify-around rounded-md"
+        >
+          <a href="https://nilsgouraudcvapp.vercel.app" target="_blank">
+            <div
+              class="h-md w-lg flex flex-col items-center p-4 hover:scale-110 transition-all"
+            >
+              <img
+                src="images/CVApp.png"
+                alt="Nile img"
+                class="rounded-t-lg h-72"
+              />
+              <div class="w-full bg-black text-center text-xl rounded-b-lg">
+                CV App
+              </div>
+            </div>
+          </a>
+          <p class="m-4 p-6 bg-black rounded-lg">
+            Un site de création de CV réalisé avec React. Le site permet
+            d'exporter au format PDF le CV créé.
+          </p>
+        </article>
       </section>
     </main>
     <footer class="p-4">
       <address id="contact" class="not-italic">
-        <div class="flex items-center mb-4 text-xl">
+        <div class="flex items-center mb-4 text-2xl">
           <div>Contact</div>
           <div class="h-0 mx-2 border border-white w-full"></div>
         </div>
