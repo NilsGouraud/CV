@@ -15,7 +15,7 @@
     >
       <div class="text-3xl cursor-pointer">Nils Gouraud</div>
       <div></div>
-      <nav class="h-full flex justify-around items-center text-lg scale-150">
+      <nav class="h-full flex justify-around items-center text-lg">
         <a
           class="h-full px-1 mx-1 hover:text-black border-r border-white hover:bg-white hover:rounded-md transition-all"
           href="#accueil"
@@ -43,7 +43,13 @@
         <label
           class="cursor-pointer scale-75 relative inline-flex items-center cursor-pointer"
         >
-          <input type="checkbox" value="" class="sr-only peer" id="darkMode" />
+          <input
+            type="checkbox"
+            onclick="alert('fonctionalité à venir')"
+            value=""
+            class="sr-only peer"
+            id="darkMode"
+          />
           <div
             class="peer ring-0 bg-rose-400 rounded-full outline-none duration-300 after:duration-500 w-12 h-12 shadow-md peer-checked:bg-emerald-500 peer-focus:outline-none after:content-['✖️'] after:rounded-full after:absolute after:outline-none after:h-10 after:w-10 after:bg-gray-50 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-hover:after:scale-75 peer-checked:after:content-['✔️'] after:-rotate-180 peer-checked:after:rotate-0"
           ></div>
@@ -84,9 +90,9 @@
           <span class="px-2 text-xl mb-0 block">Développement web</span>
           <br />
           <div class="flex justify-around">
-            <div class="bg-emerald-950 p-6 rounded-lg scale-125">
-              <span class="text-lg mb-0 block">Langages=[</span>
-              <li class="text-sm list-none m2-2 flex">
+            <div class="bg-emerald-950 p-6 rounded-lg">
+              <span class="text-xl mb-0 block">Langages=[</span>
+              <li class="text-md list-none m2-2 flex">
                 HTML & CSS
                 <img
                   src="images/css.png"
@@ -98,7 +104,7 @@
                   alt=""
                 />,
               </li>
-              <li class="text-sm list-none m2-2 flex">
+              <li class="text-md list-none m2-2 flex">
                 JavaScript
                 <img
                   src="images/js.png"
@@ -106,7 +112,7 @@
                   alt=""
                 />,
               </li>
-              <li class="text-sm list-none m2-2 flex">
+              <li class="text-md list-none m2-2 flex">
                 SQL
                 <img
                   src="images/db.png"
@@ -116,14 +122,15 @@
               </li>
               ]
             </div>
-            <div class="bg-emerald-950 p-6 rounded-lg scale-125">
-              <span class="text-lg mb-0 block text-green-700">
+            <div class="bg-emerald-950 p-6 rounded-lg">
+              <span class="text-xl mb-0 block text-green-700">
                 <span class="text-sm">/*</span>
                 Frameworks
                 <span class="text-sm">*/</span>
               </span>
-              <li class="text-sm list-none m2-2 flex items-end text-orange-600">
-                <span class="text-xs block text-white">import </span> "React"
+              <li class="text-md list-none m2-2 flex items-end text-orange-600">
+                <span class="text-xs block text-white">import </span>&nbsp;
+                "React"&nbsp;
                 <span class="text-xs block text-white"> from</span>
                 <a href="https://react.dev" target="_blank">
                   <img
@@ -133,8 +140,9 @@
                   /> </a
                 ><span class="text-white">;</span>
               </li>
-              <li class="text-sm list-none m2-2 flex items-end text-orange-600">
-                <span class="text-xs block text-white">import </span> "Tailwind"
+              <li class="text-md list-none m2-2 flex items-end text-orange-600">
+                <span class="text-xs block text-white">import </span>&nbsp;
+                "Tailwind"&nbsp;
                 <span class="text-xs block text-white"> from</span>
                 <a href="https://tailwindcss.com/" target="_blank">
                   <img
@@ -144,8 +152,9 @@
                   /> </a
                 ><span class="text-white">;</span>
               </li>
-              <li class="text-sm list-none m2-2 flex items-end text-orange-600">
-                <span class="text-xs block text-white">import </span> "Three.js"
+              <li class="text-md list-none m2-2 flex items-end text-orange-600">
+                <span class="text-xs block text-white">import </span>&nbsp;
+                "Three.js"&nbsp;
                 <span class="text-xs block text-white"> from</span>
                 <a
                   href="https://github.com/mrdoob/three.js/blob/dev/README.md"
@@ -161,11 +170,11 @@
               </li>
             </div>
 
-            <div class="bg-emerald-950 p-6 rounded-lg scale-125">
+            <div class="bg-emerald-950 p-6 rounded-lg">
               <span class="text-green-700"> <<span>!--</span> autres -->></span>
               <br />
-              <li class="text-sm list-none m2-2 flex">
-                <span><</span>Git href=
+              <li class="text-lg list-none m2-2 flex items-center">
+                <span><</span>Git <span class="text-sm">&nbsp; href=</span>
                 <a href="https://git-scm.com/ " target="_blank">
                   <img
                     src="images/git.png"
@@ -176,8 +185,8 @@
 
                 />
               </li>
-              <li class="text-sm list-none m2-2 flex">
-                <span><</span>Parcel href=
+              <li class="text-lg list-none m2-2 flex items-center">
+                <span><</span>Parcel <span class="text-sm">&nbsp; href=</span>
                 <a href="https://parceljs.org/ " target="_blank">
                   <img
                     src="images/parcel.avif"
